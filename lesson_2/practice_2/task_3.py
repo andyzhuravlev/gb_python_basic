@@ -10,7 +10,7 @@ m_dict = {0: 'Зима',
 month_int = 0
 while True:
     while True:
-        month = input('Введите номер месяца(для выхода введите exit): ')
+        month = input('Введите номер месяца(для выхода введите "exit"): ')
         if month == 'exit':
             month_int = 0
             break
