@@ -1,6 +1,7 @@
 
 rate_list = [8, 7, 6, 3, 1]
 
+new_item = 0
 while True:
     print(rate_list)
     value = input('Введите новое значение рейтинга(для выхода введите "exit"): ')
@@ -9,4 +10,8 @@ while True:
     if not value.isdigit():
         print('Введите число!')
         continue
-    value = int(value)
+    new_item = int(value)
+    if new_item == 0:
+        print('Ведите значение больше 0!')
+    else:
+        break
