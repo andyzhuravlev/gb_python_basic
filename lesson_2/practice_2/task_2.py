@@ -14,9 +14,10 @@ count = len(lis)
 while i < count:
     if i == count - 1 and count / 2 != 0:
         break
-    tmp = lis[i]
-    lis[i] = lis[i + 1]
-    lis[i + 1] = tmp
+    # tmp = lis[i]
+    # lis[i] = lis[i + 1]
+    # lis[i + 1] = tmp
+    lis[i], lis[i + 1] = lis[i + 1], lis[i]
     i += 2
 
 print(lis)
