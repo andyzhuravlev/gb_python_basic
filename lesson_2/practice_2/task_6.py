@@ -64,8 +64,18 @@ while True:
     if unit == -1:
         break
 
-    goods.append((len(goods) + 1, {'наименование': name, 'цена': price, 'количество': count, 'ед': unit_classifier[unit]['name']}))
+    goods.append((len(goods) + 1, {'наименование': name, 'цена': price, 'количество': count, 'ед': unit}))
 
 if len(goods) > 0:
-    for itm in goods:
-        print(itm)
+    goods_report = dict()
+    for i in goods[0][1].keys():
+        goods_report.setdefault(i)
+        values = []
+        for itm in goods:
+            if i == 'ед':
+                values.append(unit_classifier[itm[1][i]]['name'])
+            else:
+                values.append(itm[1][i])
+        goods_report[i] = values
+    print(goods_report)
+
