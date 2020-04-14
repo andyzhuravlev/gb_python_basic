@@ -15,3 +15,10 @@ while True:
         print('Ведите значение больше 0!')
     else:
         break
+
+for itm in rate_list[:]:
+    if new_item > itm:
+        rate_list.insert(rate_list.index(itm), new_item)
+        break
+
+print(rate_list)
