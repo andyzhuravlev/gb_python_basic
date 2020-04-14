@@ -69,13 +69,23 @@ while True:
 if len(goods) > 0:
     goods_report = dict()
     for i in goods[0][1].keys():
-        goods_report.setdefault(i)
-        values = []
+        # goods_report.setdefault(i)
+        # values = []
+        # for itm in goods:
+        #     if i == 'ед':
+        #         values.append(unit_classifier[itm[1][i]]['name'])
+        #     else:
+        #         values.append(itm[1][i])
+        # goods_report[i] = values
+        var_keys = goods[0][1].keys()
+        for itm in var_keys:
+            goods_report.setdefault(itm)
+            goods_report[itm] = []
         for itm in goods:
-            if i == 'ед':
-                values.append(unit_classifier[itm[1][i]]['name'])
-            else:
-                values.append(itm[1][i])
-        goods_report[i] = values
+            for key in itm[1]:
+                if key == 'ед':
+                    goods_report[key].append(unit_classifier[itm[1][key]]['name'])
+                else:
+                    goods_report[key].append(itm[1][key])
     print(goods_report)
 
