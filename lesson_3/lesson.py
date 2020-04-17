@@ -23,9 +23,21 @@
 # print(a)
 
 
-def my_sum(a, b, c: int = 22):
-    return a + b + c
+# def my_sum(a, b, c: int = 22):
+#     return a + b + c
+#
+#
+# tmp = my_sum(1, 2, 3)
+# print(tmp)
 
+num = 10201000
 
-tmp = my_sum(1, 2, 3)
-print(tmp)
+i = 0
+while True:
+    if num % 10 == 0:
+        i += 1
+        num //= 10
+    else:
+        break
+
+print(i)

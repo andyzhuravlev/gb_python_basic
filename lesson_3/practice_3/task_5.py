@@ -5,3 +5,18 @@
 # программы завершается. Если специальный символ введен после нескольких чисел, то вначале нужно добавить сумму этих
 # чисел к полученной ранее сумме и после этого завершить программу.
 
+result = 0;
+while True:
+    input_string = input('Введите числа через пробел. Для выхода введите exit: ')
+    input_string = input_string.split(' ')
+    pos = len(input_string) if input_string.count('exit') else input_string.index('exit')
+
+    for itm in input_string[:pos]:
+        if not itm.isdigit():
+            break
+        result += int(itm)
+
+    print(f'{result}')
+
+    if pos > 0:
+        break
