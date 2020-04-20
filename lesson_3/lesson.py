@@ -30,14 +30,22 @@
 # tmp = my_sum(1, 2, 3)
 # print(tmp)
 
-num = 10201000
+# num = 10201000
+#
+# i = 0
+# while True:
+#     if num % 10 == 0:
+#         i += 1
+#         num //= 10
+#     else:
+#         break
+#
+# print(i)
 
-i = 0
-while True:
-    if num % 10 == 0:
-        i += 1
-        num //= 10
-    else:
-        break
+# my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# #
+# # a = list(map(lambda x: x ** 2, my_list))
+# # print(a)
 
-print(i)
+sq = lambda param: param * 0.5
+print(sq(100))
