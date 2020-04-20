@@ -4,3 +4,4 @@
 Подсказка: использовать функцию range() и генератор.
 """
 
+print([itm for itm in range(20, 240) if itm % 20 == 0 or itm % 21 == 0])
