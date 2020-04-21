@@ -15,7 +15,7 @@ def get_list() -> list:
     :return:
     """
 
-    return [i for i in range(100, 1000) if i % 2 == 0]
+    return [i for i in range(100, 1001) if i % 2 == 0]
 
 
 if __name__ == '__main__':
