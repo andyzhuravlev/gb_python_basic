@@ -5,22 +5,12 @@
 """
 
 from random import uniform as uniform
-
-
-def get_list() -> list:
-    """
-
-    :return:
-    """
-
-    size_of_list = int(uniform(20, 30))
-
-    return [int(uniform(i, 100)) for i in range(0, size_of_list)]
+from my_gen import get_list as get_list
 
 
 if __name__ == '__main__':
 
-    lis = get_list()
+    lis = get_list(20, 30, 100)
     i = 0
     print(lis)
     while i < len(lis):
