@@ -27,6 +27,10 @@ class TrafficLight:
         self._color: int = 0
 
     def running(self):
+        """
+
+        :return:
+        """
 
         colors = [
             Color(color='\033[41m', sleep_time=7),
