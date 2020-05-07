@@ -10,10 +10,16 @@
 class Date:
 
     __date: str = ''
+    mm: str
+    dd: str
+    yy: str
 
     def __init__(self, date: str):
 
         self.__date = date
+        self.mm = '1'
+        self.dd = '1'
+        self.yy = '2017'
 
     @classmethod
     def get_date(cls):
@@ -24,7 +30,6 @@ class Date:
     def validate() -> bool:
 
         return True
-
 
 
 if __name__ == '__main__':
